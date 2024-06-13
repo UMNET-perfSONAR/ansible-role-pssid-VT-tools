@@ -1,4 +1,5 @@
 ---
+# STATUS -- checked
 - name: Disable and stop wpa_supplicant
   systemd:
     name: wpa_supplicant

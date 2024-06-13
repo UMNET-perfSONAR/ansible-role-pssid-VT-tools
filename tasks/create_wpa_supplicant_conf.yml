@@ -1,4 +1,6 @@
-# remember to put inventory/group_vars/all/wpa_supplicant_profiles.yml
+# wpa_supplicant_profiles.yml is put in .vars/ folder
+# provide --ask-vault-pass when running the playbook 
+# STATUS -- checked
 ---
 - name: Load SSID profiles
   include_vars: "{{ role_path }}/vars/wpa_supplicant_profiles.yml"
