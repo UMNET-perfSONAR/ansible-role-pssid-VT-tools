@@ -1,0 +1,14 @@
+---
+# status -- checked
+- name: Ensure JL2/JL3 directory exists
+  file:
+    path: /usr/lib/exec/pssid
+    state: directory
+    mode: 0755
+
+# status -- checked (replaced the variable with actual link)
+- name: Clone the Git repository
+  git:
+    repo: "{{ git_repo_url }}"
+    dest: /usr/lib/exec/pssid
+    version: main 

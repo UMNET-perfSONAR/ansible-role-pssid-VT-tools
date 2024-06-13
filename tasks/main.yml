@@ -1,0 +1,5 @@
+---
+- import_tasks: clone_repo.yml
+- import_tasks: install_dependency.yml
+- import_tasks: disable_services.yml
+- import_tasks: create_wpa_supplicant_conf.yml

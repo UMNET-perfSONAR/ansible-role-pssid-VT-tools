@@ -1,0 +1,9 @@
+---
+# status -- checked
+- name: Install dependencies
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - jq
+    - dhcpcd5
