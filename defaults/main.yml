@@ -1,0 +1,5 @@
+# group vars
+bootstrap_jumpboxes: []
+bootstrap_user_group: nobody
+bootstrap_users: []
+bootstrap_key_url:
