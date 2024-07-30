@@ -1,0 +1,19 @@
+---
+# STATUS -- checked
+- name: Disable and stop wpa_supplicant
+  systemd:
+    name: wpa_supplicant
+    state: stopped
+    enabled: no
+
+- name: Disable and stop unattended-upgrades
+  systemd:
+    name: unattended-upgrades
+    state: stopped
+    enabled: no
+
+- name: Disable and stop dhcpcd
+  systemd:
+    name: dhcpcd
+    state: stopped
+    enabled: no

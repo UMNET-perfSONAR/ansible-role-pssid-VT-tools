@@ -1,0 +1,21 @@
+# wpa_supplicant_profiles.yml is put in .vars/ folder
+# provide --ask-vault-pass when running the playbook 
+# STATUS -- checked
+---
+- name: Load SSID profiles
+  include_vars: "{{ role_path }}/vars/wpa_supplicant_profiles.yml"
+
+- name: Create wpa_supplicant configure file directory
+  file:
+    path: /etc/wpa_supplicant/
+    state: directory
+    mode: 0755
+
+- name: Generate wpa_supplicant.conf for each network
+  template:
+    src: wpa_supplicant.conf.j2
+    dest: /etc/wpa_supplicant/wpa_supplicant_{{ network.ssid }}.conf
+  loop: "{{ wpa_supplicant_profiles.networks }}"
+  loop_control:
+    loop_var: network
+  no_log: True

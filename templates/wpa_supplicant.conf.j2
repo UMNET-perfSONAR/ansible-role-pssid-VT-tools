@@ -1,0 +1,14 @@
+ctrl_interface = {{ wpa_supplicant_profiles.global_settings.ctrl_interface }}
+
+network={
+    ssid="{{ network.ssid }}"
+    key_mgmt="{{ network.key_mgmt }}"
+    eap="{{ network.eap }}"
+    proto="{{ network.proto }}"
+    pairwise="{{ network.pairwise }}"
+    group="{{ network.group }}"
+    phase2="{{ network.phase2 }}"
+    identity="{{ network.identity }}"
+    password="{{ network.password }}"
+}
+
