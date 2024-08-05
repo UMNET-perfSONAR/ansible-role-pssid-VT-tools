@@ -3,7 +3,7 @@
 # STATUS -- checked
 ---
 - name: Load SSID profiles
-  include_vars: "{{ role_path }}/vars/wpa_supplicant_profiles.yml"
+  include_vars: "{{ role_path }}/defaults/wpa_supplicant_profiles.yml"
 
 - name: Create wpa_supplicant configure file directory
   file:
